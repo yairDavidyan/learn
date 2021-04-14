@@ -1,0 +1,36 @@
+.container-image {
+  background-color: blue;
+}
+.image {
+  background-color: chartreuse;
+  /* border: 5px solid red; */
+  height: 146px;
+  width: 200px;
+}
+.title {
+  background-color: rgb(241, 245, 9);
+  height: 50px;
+  width: 200px;
+  overflow: hidden;
+}
+.description {
+  background-color: rgb(9, 7, 10);
+  text-align: center;
+  padding: 10px;
+  width: 300px;
+  overflow: hidden;
+  color: aliceblue;
+}
+.price {
+  background-color: rgb(241, 245, 9);
+  text-align: center;
+  padding-top: 90px;
+  width: 50px;
+}
+
+.div-products {
+  height: 200px;
+  width: 600px;
+  display: flex;
+  margin: 35px;
+}

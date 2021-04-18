@@ -170,10 +170,11 @@ function App() {
       "image": "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg"
     }
   ]
+  let a = 4;
   const listProdaucts = product.map(item =>
     <li key={item.id}>
       key: {item.id}
-      {item.price}
+      {item.price} 
     </li>
   )
   return (

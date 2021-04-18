@@ -3,12 +3,12 @@ import './products.css';
 function Products(props) {
     const { items } = props;
     
-    
+
 
     return (
         <div className ="div-products">
             <div className="container=image">                
-                <img src={items.image} className="image"></img>
+                <img alt={items.title} src={items.image} className="image"></img>
                 <div className="title">{ items.title}</div>
             </div>
             <div className="description">{ items.description}</div>

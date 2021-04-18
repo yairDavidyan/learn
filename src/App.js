@@ -1,8 +1,10 @@
-import logo from './logo.svg';
+
 import './App.css';
 import Products from './Products';
 import Header from './Header';
-import { useDebugValue } from 'react';
+import ListItem from './ListItem';
+import { findByDisplayValue } from '@testing-library/dom';
+
 
 function App() {
 
@@ -168,23 +170,21 @@ function App() {
       "image": "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg"
     }
   ]
-
-console.log(product);
- let temp= product.filter((p) => {
-    if (p.price >100) {
-      return true
-    } else {
-      return false;
-    }
-  }
-  );
-  console.log(temp);
+  const listProdaucts = product.map(item =>
+    <li key={item.id}>
+      key: {item.id}
+      {item.price}
+    </li>
+  )
   return (
     <div>
-      <Header/>
-      {temp.map(item => (
+        <ListItem items={listProdaucts}/>
+      <div>
+      {product.map(item => (
         <Products key={item.id} items={item}>
         </Products>))}
+        <ListItem/>
+      </div>
     </div>
   );
 }
